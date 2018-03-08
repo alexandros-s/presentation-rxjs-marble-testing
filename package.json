@@ -4,23 +4,26 @@
   "private": true,
   "description": "A reveal.js boilerplate using webpack and jade.",
   "dependencies": {
-    "reveal.js": "^3.2.0"
+    "ava": "^0.25.0",
+    "reveal.js": "^3.2.0",
+    "rxjs": "^5.5.6"
   },
   "devDependencies": {
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
     "jade": "^1.11.0",
     "jade-html-loader": "0.0.3",
+    "marked": "^0.3.17",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
+    "test": "ava ./src/examples",
     "build": "node node_modules/webpack/bin/webpack.js --progress --colors",
     "server": "node node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors --inline --hot"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "akuryou",
   "license": "MIT"
 }

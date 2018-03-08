@@ -3,10 +3,15 @@ html(lang="en")
   head
     title reveal.js boiler plate
   body
-    .reveal
+    .reveal.presentation
       .slides
         section
-          h1 Slide 1
+          section
+            include:markdown ./intro/cover.md
+          section
+            include:markdown ./intro/what-is-marble-testing.md
+          section
+            include:markdown ./intro/the-tools-of-marble-testing.md
         section
-          h1 Slide 2
+          h1 yo
   script(type='text/javascript' src="bundle.js")

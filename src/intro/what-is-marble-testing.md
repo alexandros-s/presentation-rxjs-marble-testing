@@ -1,0 +1,3 @@
+## Marble Testing is...
+> Testing a **set of Observables** in a **synchronous manner** 
+and described with a declarative DSL named **Marble Diagrams**.
