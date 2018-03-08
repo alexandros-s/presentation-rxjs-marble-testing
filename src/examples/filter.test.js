@@ -28,4 +28,3 @@ test('It should filter odd numbers', t => {
   testScheduler.expectObservable(oddIntegers$).toBe(expectedTimeline, valuesMap);
   testScheduler.flush();
 });
-

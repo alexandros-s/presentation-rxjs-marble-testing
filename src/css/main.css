@@ -5,3 +5,7 @@
 .presentation h2 {
     color: #b3ff1c;
 }
+
+.presentation h1 {
+    text-transform: none;
+}

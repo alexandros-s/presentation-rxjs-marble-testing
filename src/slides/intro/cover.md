@@ -1,4 +1,4 @@
-# yellow RxJS
+# RxJS
 -a--c----e-  
 --b---d----
 

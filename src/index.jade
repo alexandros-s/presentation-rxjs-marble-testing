@@ -7,11 +7,27 @@ html(lang="en")
       .slides
         section
           section
-            include:markdown ./intro/cover.md
+            include:markdown slides/intro/cover.md
           section
-            include:markdown ./intro/what-is-marble-testing.md
-          section
-            include:markdown ./intro/the-tools-of-marble-testing.md
+            include:markdown slides/intro/what-is-marble-testing.md
         section
-          h1 yo
+          section
+            include:markdown slides/marble-diagrams/intro.md
+          section
+            include:markdown slides/marble-diagrams/marble-syntax.md
+        section
+          section
+            include:markdown slides/test-scheduler/intro.md
+          section
+            include:markdown slides/test-scheduler/virtual-scheduler.md
+          section
+            include:markdown slides/test-scheduler/making-an-ava-test-scheduler.md
+          section
+            include:markdown slides/test-scheduler/testscheduler-helpers.md
+          section
+            include:markdown slides/test-scheduler/testscheduler-assertions.md
+        section
+          section
+            include:markdown slides/demo/intro.md
+
   script(type='text/javascript' src="bundle.js")
