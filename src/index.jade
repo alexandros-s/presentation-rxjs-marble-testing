@@ -6,31 +6,35 @@ html(lang="en")
     .reveal.presentation
       .slides
         section
-          section
-            include:markdown slides/intro/cover.md
-          section
-            include:markdown slides/intro/what-is-marble-testing.md
+          include:markdown slides/intro/cover.md
+        section
+          include:markdown slides/intro/what-is-marble-testing.md
+        section
+          include:markdown slides/marble-diagrams/intro.md
+        section
+          include:markdown slides/marble-diagrams/marble-syntax.md
+        section
+          include:markdown slides/test-scheduler/intro.md
+        section
+          include:markdown slides/test-scheduler/virtual-scheduler.md
         section
           section
-            include:markdown slides/marble-diagrams/intro.md
+            include:markdown slides/test-scheduler/making-an-ava-test-scheduler-rxjs6.md
           section
-            include:markdown slides/marble-diagrams/marble-syntax.md
+            include:markdown slides/test-scheduler/making-an-ava-test-scheduler-rxjs5.md
         section
           section
-            include:markdown slides/test-scheduler/intro.md
+            include:markdown slides/test-scheduler/testscheduler-helpers-rxjs6.md
           section
-            include:markdown slides/test-scheduler/virtual-scheduler.md
-          section
-            include:markdown slides/test-scheduler/making-an-ava-test-scheduler.md
-          section
-            include:markdown slides/test-scheduler/testscheduler-helpers.md
-          section
-            include:markdown slides/test-scheduler/testscheduler-assertions.md
+            include:markdown slides/test-scheduler/testscheduler-helpers-rxjs5.md
         section
           section
-            include:markdown slides/demo/intro.md
-        section
+            include:markdown slides/test-scheduler/testscheduler-assertions-rxjs6.md
           section
-            include:markdown slides/closing/useful-resources.md
+            include:markdown slides/test-scheduler/testscheduler-assertions-rxjs5.md
+        section
+          include:markdown slides/demo/intro.md
+        section
+          include:markdown slides/closing/useful-resources.md
 
   script(type='text/javascript' src="bundle.js")

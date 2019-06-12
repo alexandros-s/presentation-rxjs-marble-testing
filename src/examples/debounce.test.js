@@ -1,12 +1,9 @@
 /**
  * Created by alexandros on 08/03/2018.
  */
-import {
-  TestScheduler,
-} from 'rxjs/Rx';
-
+import { TestScheduler } from 'rxjs/testing';
+import { debounceTime } from 'rxjs/operators';
 import test from 'ava';
-
 
 test('It should debounce the integers by 30', t => {
   const valuesMap = {
@@ -16,14 +13,15 @@ test('It should debounce the integers by 30', t => {
     d: 5,
   };
 
-const integersTimeline  = 'a-b-c-----d---';
-const expectedTimeline  = '-------c-----d';
+  const integersTimeline  = 'a-b-c-----d---';
+  const expectedTimeline  = '-------c-----d';
 
-const testScheduler = new TestScheduler(t.deepEqual.bind(t)); // <= a little trick here
+  const testScheduler = new TestScheduler(t.deepEqual.bind(t)); // <= a little trick here
 
-const integers$ = testScheduler.createColdObservable(integersTimeline, valuesMap);
-const debouncedIntegers$ = integers$.debounceTime(30, testScheduler);
-
-testScheduler.expectObservable(debouncedIntegers$).toBe(expectedTimeline, valuesMap);
-testScheduler.flush();
+  testScheduler.run(({expectObservable, cold}) => {
+    const integers$ = cold(integersTimeline, valuesMap);
+    const debouncedIntegers$ = integers$.pipe(debounceTime(3, testScheduler));
+    
+    expectObservable(debouncedIntegers$).toBe(expectedTimeline, valuesMap);
+  });
 });

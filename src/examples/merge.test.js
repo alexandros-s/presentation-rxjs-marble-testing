@@ -1,13 +1,9 @@
 /**
  * Created by alexandros on 08/03/2018.
  */
-import {
-  TestScheduler,
-} from 'rxjs/Rx';
-
+import { TestScheduler } from 'rxjs/testing';
+import { merge } from 'rxjs/operators';
 import test from 'ava';
-
-const merge = (a$, b$) => a$.merge(b$);
 
 test('It should merge a$ and b$', t => {
   const valuesMap = {
@@ -23,11 +19,12 @@ test('It should merge a$ and b$', t => {
 
   const testScheduler = new TestScheduler(t.deepEqual.bind(t)); // <= a little trick here
 
-  const a$ = testScheduler.createColdObservable(aMarble, valuesMap);
-  const b$ = testScheduler.createColdObservable(bMarble, valuesMap);
-
-  const ab$ = merge(a$, b$);
-
-  testScheduler.expectObservable(ab$).toBe(expectationMarble, valuesMap);
-  testScheduler.flush();
+  testScheduler.run(({expectObservable, cold}) => {
+    const a$ = cold(aMarble, valuesMap);
+    const b$ = cold(bMarble, valuesMap);
+  
+    const ab$ = a$.pipe(merge(b$));
+  
+    expectObservable(ab$).toBe(expectationMarble, valuesMap);
+  });
 });

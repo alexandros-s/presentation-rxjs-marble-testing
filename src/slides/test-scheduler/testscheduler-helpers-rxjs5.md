@@ -1,6 +1,6 @@
-# TestScheduler Helpers
+# TestScheduler Helpers (RxJS5)
 
-The testScheduler object provides helpers for creating cold and hot observables from a marble timeline.
+The testScheduler object provides helpers for creating cold and hot observables from a marble syntax timeline.
 
 ```js
 const integers$ = testScheduler.createColdObservable(

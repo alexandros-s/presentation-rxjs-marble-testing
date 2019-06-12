@@ -1,4 +1,4 @@
-# AVA + TestScheduler
+# AVA + TestScheduler (back in RxJS5)
 
 The TestScheduler requires a `deepEqual` assertion.
 

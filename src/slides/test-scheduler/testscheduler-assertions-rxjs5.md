@@ -1,4 +1,4 @@
-# TestSchedulers Assertions
+# TestSchedulers AVA Assertions (back in RxJS5)
 
 The `testScheduler` provides an assertion in the format:
 ```js
