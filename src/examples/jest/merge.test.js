@@ -3,7 +3,7 @@ import { merge } from 'rxjs/operators';
 
 describe('merge', () => {
   it('fails', () => {
-    const scheduler = new TestScheduler((actual, expected) => {
+    const testScheduler = new TestScheduler((actual, expected) => {
       expect(actual).toEqual(expected);
     });
 
@@ -17,7 +17,7 @@ describe('merge', () => {
       n: 3,
     };
 
-    scheduler.run(({ cold, expectObservable }) => {
+    testScheduler.run(({ cold, expectObservable }) => {
       const a$ = cold(a, map);
       const b$ = cold(b, map);
       expectObservable(a$.pipe(merge(b$))).toBe(e, map);
