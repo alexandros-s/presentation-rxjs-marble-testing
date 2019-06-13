@@ -12,7 +12,8 @@ module.exports = {
       {test: /\.css$/, loader: "style!css"},
       {test: /\.eot$/, loader: "file"},
       {test: /\.ttf$/, loader: "file"},
-      {test: /\.woff$/, loader: "file"}
+      {test: /\.woff$/, loader: "file"},
+      {test: /\.png$/, loader: "file"}
     ]
   }
 };

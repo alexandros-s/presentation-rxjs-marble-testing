@@ -8,6 +8,9 @@ http://www.introtorx.com
 https://github.com/ReactiveX/rxjs/blob/stable/src/testing/TestScheduler.ts  
 https://github.com/ReactiveX/rxjs/blob/master/doc/writing-marble-tests.md#marble-syntax
 
-## Presentation & Exaples
-https://github.com/alexandros-s/presentation-rxjs-marble-testing
+## Presentation
+https://dance-cmdr.github.io/rxjs-marble-testing/
+
+## Repository
+https://github.com/dance-cmdr/presentation-rxjs-marble-testing
 </small>

@@ -1,8 +1,8 @@
-@import '~reveal.js/css/reveal.css';
-@import '~reveal.js/css/theme/black.css';
-
 .presentation h1 {
     color: #f7ff1c;
+    padding: 0;
+    margin: 0;
+    font-size:2em;
 }
 
 .presentation h2 {
@@ -31,4 +31,8 @@
 
 .presentation strong {
     color: #b3ff1c;
+}
+
+.presentation section img {
+    border: none;
 }

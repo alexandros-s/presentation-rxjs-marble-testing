@@ -1,11 +1,10 @@
-# AVA + TestScheduler (RxJS6)
+# AVA + TestScheduler
+### RxJS6
 
-The TestScheduler requires a `deepEqual` assertion.
+The **TestScheduler** requires to use the test runner's `deepEqual` assertion. We provide that during instantiation of the test scheduler:
 
-We provide that during instantiation:
 ```javascript
 import { TestScheduler } from 'rxjs/testing';
-
 import test from 'ava';
 
 test('Wannabe Marble Test', t => {

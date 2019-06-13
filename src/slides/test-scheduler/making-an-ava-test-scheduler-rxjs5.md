@@ -1,8 +1,8 @@
-# AVA + TestScheduler (back in RxJS5)
+# AVA + TestScheduler
+### back in RxJS5
 
-The TestScheduler requires a `deepEqual` assertion.
+The **TestScheduler** requires to use the test runner's `deepEqual` assertion. We provide that during instantiation of the test scheduler:
 
-We provide that during instantiation:
 ```javascript
 import {
   TestScheduler,

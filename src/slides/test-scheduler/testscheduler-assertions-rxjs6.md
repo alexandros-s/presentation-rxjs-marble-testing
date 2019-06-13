@@ -1,6 +1,7 @@
-# TestSchedulers AVA Assertions (RxJS6)
+# TestSchedulers Assertions
+### RxJS6
 
-The `testScheduler` provides an assertion in the format:
+The **TestScheduler** provides an assertion in the format:
 ```js
 testScheduler.run(({ expectObservable }) => {
     expectObservable(streamUnderTest$).toBe(

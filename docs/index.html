@@ -1,30 +1,32 @@
-<!DOCTYPE html><html lang="en"><head><title>reveal.js boiler plate</title></head><body><div class="reveal presentation"><div class="slides"><section><h1 id="rxjs">RxJS</h1>
+<!DOCTYPE html><html lang="en"><head><title>MArble Testing RxJS6</title></head><body><div class="reveal presentation"><div class="slides"><section><h1 id="rxjs">RxJS</h1>
 <p>-a--c----e-<br>--b---d----</p>
 <p>--a-c-c--e-</p>
 <h2 id="marble-testing">Marble Testing</h2>
 </section><section><h1 id="marble-testing-is-">Marble Testing is...</h1>
 <blockquote>
-<p>Testing a <strong>set of Observables</strong> in a <strong>synchronous manner</strong>,<br>described in <strong>Marble Diagrams</strong> with a declarative DSL named <strong>Marble Syntax</strong>.</p>
+<p>Testing a <strong>set of Observables</strong> in a <strong>synchronous manner</strong>, described in <strong>Marble Diagrams</strong> with a declarative DSL named <strong>Marble Syntax</strong>.</p>
 </blockquote>
 <p>~ Me</p>
 </section><section><h1 id="marble-diagrams">Marble Diagrams</h1>
+<p>--<strong>1</strong>--<strong>2</strong>--<strong>3</strong>--<strong>5</strong>--<strong>8</strong>--<strong>13</strong>--<strong>(you will never finish your sprint!!!)</strong>--|</p>
 <blockquote>
-<p>A marble diagram is composed by timelines and values that
-describe the change of Observable values over time.</p>
+<p>A <strong>marble diagram</strong> is composed by <strong>timelines</strong> with value references that
+describe the <strong>Observable</strong> value change over time.</p>
 </blockquote>
 <p>~ also Me</p>
-<p><small>By composing a diagram with a number of these timelines we could describe the relationship between Observables that react to each other.</p>
-<p><a href="http://rxmarbles.com/#filter">http://rxmarbles.com/#filter</a>
+<p><small>
+<a href="http://rxmarbles.com/#filter">http://rxmarbles.com/#filter</a>
 </small></p>
 </section><section><h1 id="marble-syntax">Marble Syntax</h1>
+<p><strong>^</strong>-<strong>b</strong>-<strong>a</strong>-<strong>(na)</strong>-<strong>n</strong>-<strong>a</strong>-<strong>|</strong></p>
 <blockquote>
-<p>Marble syntax is a string represents events happening over &quot;time&quot;. The first character of any marble string always represents the &quot;zero frame&quot;. A &quot;frame&quot; is somewhat analogous to a virtual millisecond.</p>
+<p>The <strong>Marble Syntax</strong> is a string sequence that describes events that occur over time. Each character of the sequence represents a <strong>frame</strong>. A <strong>frame</strong> is somewhat analogous to a virtual millisecond.</p>
 </blockquote>
-<p>~ I stole this one from the original website.</p>
 <p><small>
 <a href="https://github.com/ReactiveX/rxjs/blob/master/doc/writing-marble-tests.md#marble-syntax">https://github.com/ReactiveX/rxjs/blob/master/doc/writing-marble-tests.md#marble-syntax</a>
 </small></p>
 </section><section><h1 id="the-testscheduler">The TestScheduler</h1>
+<p><img src="images/mock-dog.png" alt="Are you mocking me?" title="mock dog"></p>
 <ul>
 <li>It is virtual scheduler (Controls Time).</li>
 <li>Provides helpers.</li>
@@ -40,7 +42,19 @@ We use the TestScheduler as a substitute, or test double, for the production ISc
 <p><small>
 <a href="http://www.introtorx.com/content/v1.0.10621.0/16_TestingRx.html">http://www.introtorx.com/content/v1.0.10621.0/16_TestingRx.html</a>
 </small></p>
-</section><section><section><h1 id="ava-testscheduler-rxjs6-">AVA + TestScheduler (RxJS6)</h1>
+</section><section><section><h1 id="jest-testscheduler">Jest + TestScheduler</h1>
+<h3 id="rxjs6">RxJS6</h3>
+<p>The TestScheduler requires a <code>deepEqual</code> assertion.</p>
+<p>We provide that during instantiation:</p>
+<pre><code class="lang-javascript">import { TestScheduler } from &#39;rxjs/testing&#39;;
+
+it(&#39;Wannabe Marble Test&#39;, t =&gt; {
+  const testScheduler = new TestScheduler((actual, expected) =&gt; {
+    expect(actual).toEqual(expected);
+  });
+});
+</code></pre>
+</section><section><h1 id="ava-testscheduler-rxjs6-">AVA + TestScheduler (RxJS6)</h1>
 <p>The TestScheduler requires a <code>deepEqual</code> assertion.</p>
 <p>We provide that during instantiation:</p>
 <pre><code class="lang-javascript">import { TestScheduler } from &#39;rxjs/testing&#39;;
