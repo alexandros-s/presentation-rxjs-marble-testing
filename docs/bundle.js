@@ -575,7 +575,7 @@
 
 
 	// module
-	exports.push([module.id, ".presentation h1 {\n    color: #f7ff1c;\n}\n\n.presentation h2 {\n    color: #b3ff1c;\n}\n\n.presentation h3 {\n    color: #aa0881;\n    font-family: Monaco;\n    text-transform: none;\n}\n\n.presentation h1 {\n    text-transform: none;\n}\n\n.presentation p {\n    line-height: 1em;\n    font-size: 0.8em;\n}\n\n.presentation pre code {\n    font-size: 1rem;\n    font-family: Monaco;\n}\n\n.presentation strong {\n    color: #b3ff1c;\n}", ""]);
+	exports.push([module.id, ".presentation h1 {\n    color: #f7ff1c;\n    padding: 0;\n    margin: 0;\n    font-size:2em;\n}\n\n.presentation h2 {\n    color: #b3ff1c;\n}\n\n.presentation h3 {\n    color: #aa0881;\n    font-family: Monaco;\n    text-transform: none;\n}\n\n.presentation h1 {\n    text-transform: none;\n}\n\n.presentation p {\n    line-height: 1em;\n    font-size: 0.8em;\n}\n\n.presentation pre code {\n    font-size: 1rem;\n    font-family: Monaco;\n}\n\n.presentation strong {\n    color: #b3ff1c;\n}\n\n.presentation section img {\n    border: none;\n}", ""]);
 
 	// exports
 
