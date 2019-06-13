@@ -13,18 +13,18 @@ test('It should merge a$ and b$', t => {
     d: 5,
   };
 
-  const aMarble             = 'a-b------c---d';
-  const bMarble             = '--a-----b--d-c';
-  const expectationMarble   = 'a-(ba)--bc-d-(dc)';
+  const a = '---a---a---a--|';
+  const b = '-b---n---n----|';
+  const e = '-b-a-n-a-n-a--|';
 
   const testScheduler = new TestScheduler(t.deepEqual.bind(t)); // <= a little trick here
 
-  testScheduler.run(({expectObservable, cold}) => {
-    const a$ = cold(aMarble, valuesMap);
-    const b$ = cold(bMarble, valuesMap);
-  
+  testScheduler.run(({ expectObservable, cold }) => {
+    const a$ = cold(a, valuesMap);
+    const b$ = cold(b, valuesMap);
+
     const ab$ = a$.pipe(merge(b$));
-  
-    expectObservable(ab$).toBe(expectationMarble, valuesMap);
+
+    expectObservable(ab$).toBe(e, valuesMap);
   });
 });

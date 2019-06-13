@@ -5,7 +5,7 @@ import { TestScheduler } from 'rxjs/testing';
 import { debounceTime } from 'rxjs/operators';
 import test from 'ava';
 
-test('It should debounce the integers by 30', t => {
+test('It should debounce the integers by 3', t => {
   const valuesMap = {
     a: 2,
     b: 3,
