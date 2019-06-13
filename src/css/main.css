@@ -1,3 +1,6 @@
+@import '~reveal.js/css/reveal.css';
+@import '~reveal.js/css/theme/black.css';
+
 .presentation h1 {
     color: #f7ff1c;
 }
@@ -6,6 +9,26 @@
     color: #b3ff1c;
 }
 
+.presentation h3 {
+    color: #aa0881;
+    font-family: Monaco;
+    text-transform: none;
+}
+
 .presentation h1 {
     text-transform: none;
+}
+
+.presentation p {
+    line-height: 1em;
+    font-size: 0.8em;
+}
+
+.presentation pre code {
+    font-size: 1rem;
+    font-family: Monaco;
+}
+
+.presentation strong {
+    color: #b3ff1c;
 }

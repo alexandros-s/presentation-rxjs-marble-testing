@@ -1,4 +1,6 @@
-# Jest + TestScheduler (RxJS6)
+# Jest + TestScheduler
+
+### RxJS6
 
 The TestScheduler requires a `deepEqual` assertion.
 

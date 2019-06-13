@@ -1,5 +1,8 @@
 # The TestScheduler
 
+![Are you mocking me?](images/mock-dog.png "mock dog")
+
+
 * It is virtual scheduler (Controls Time).
 * Provides helpers.
 * Provides an assertion wrapper.

@@ -1,7 +1,8 @@
 # Marble Syntax
-> Marble syntax is a string represents events happening over "time". The first character of any marble string always represents the "zero frame". A "frame" is somewhat analogous to a virtual millisecond.
 
-~ I stole this one from the original website.
+**^**-**b**-**a**-**(na)**-**n**-**a**-**|**
+
+> The **Marble Syntax** is a string sequence that describes events that occur over time. Each character of the sequence represents a **frame**. A **frame** is somewhat analogous to a virtual millisecond.
 
 <small>
 https://github.com/ReactiveX/rxjs/blob/master/doc/writing-marble-tests.md#marble-syntax

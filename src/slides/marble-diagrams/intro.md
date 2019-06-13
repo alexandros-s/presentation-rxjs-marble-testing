@@ -1,10 +1,13 @@
 # Marble Diagrams
-> A marble diagram is composed by timelines and values that
-describe the change of Observable values over time.
+
+--**1**--**2**--**3**--**5**--**8**--**13**--**(you will never finish your sprint!!!)**--|
+
+
+> A **marble diagram** is composed by **timelines** with value references that
+describe the **Observable** value change over time.
 
 ~ also Me
 
-<small>By composing a diagram with a number of these timelines we could describe the relationship between Observables that react to each other.
-
+<small>
 http://rxmarbles.com/#filter
 </small>
