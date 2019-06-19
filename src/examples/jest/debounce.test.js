@@ -15,7 +15,7 @@ describe('debounce', () => {
         };
       
         const integersTimeline  = 'a-b-c-----d---';
-        const expectedTimeline  = '-------c-----d';
+        const expectedTimeline  = '7ms (c) 3ms (d)';
             
         testScheduler.run(({expectObservable, cold}) => {
           const integers$ = cold(integersTimeline, valuesMap);
