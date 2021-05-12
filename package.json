@@ -6,7 +6,7 @@
   "dependencies": {
     "ava": "^0.25.0",
     "jest": "^24.8.0",
-    "reveal.js": "^3.2.0",
+    "reveal.js": "^3.9.2",
     "rxjs": "^6.5.2"
   },
   "devDependencies": {
